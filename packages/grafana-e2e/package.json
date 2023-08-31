@@ -27,7 +27,9 @@
     "lint": "eslint cypress/ src/ --ext=.js,.ts,.tsx",
     "open": "cypress open",
     "start": "cypress run --headless --browser chrome",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "11.0.2",
@@ -48,10 +50,12 @@
     "@grafana/tsconfig": "^1.0.0-rc1",
     "blink-diff": "1.0.13",
     "commander": "5.0.0",
-    "cypress": "4.5.0",
+    "cypress": "13.0.0",
     "execa": "4.0.0",
     "ts-loader": "6.2.1",
     "typescript": "3.7.5",
-    "yaml": "^1.8.3"
-  }
+    "yaml": "^1.8.3",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
