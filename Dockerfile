@@ -32,7 +32,7 @@ COPY build.go package.json ./
 RUN go run build.go build
 
 # Final stage
-FROM alpine:3.11
+FROM alpine:3.18.4
 
 LABEL maintainer="Grafana team <hello@grafana.com>"
 
